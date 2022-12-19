@@ -1,0 +1,100 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders user form 1`] = `
+<div>
+  <div
+    class="App"
+  >
+    <form
+      class="user-form"
+    >
+      <label>
+        Name
+      </label>
+      <input
+        name="name"
+        readonly=""
+        type="text"
+        value=""
+      />
+      <label>
+        Last Name
+      </label>
+      <input
+        name="lastName"
+        readonly=""
+        type="text"
+        value=""
+      />
+      <label>
+        E-mail
+      </label>
+      <input
+        name="email"
+        readonly=""
+        type="text"
+        value=""
+      />
+      <label>
+        Car
+      </label>
+      <select
+        data-testid="select"
+      >
+        <option
+          value=""
+        >
+          Please select a car
+        </option>
+        <option
+          value="Golf"
+        >
+          Golf
+        </option>
+        <option
+          value="Arteon"
+        >
+          Arteon
+        </option>
+        <option
+          value="Tiguan"
+        >
+          Tiguan
+        </option>
+      </select>
+      <label>
+        Purchase Date
+      </label>
+      <div
+        class="react-datepicker-wrapper"
+      >
+        <div
+          class="react-datepicker__input-container"
+        >
+          <input
+            class=""
+            placeholder="Click to select a date"
+            type="text"
+            value=""
+          />
+        </div>
+      </div>
+      <div
+        class="user-form-buttons"
+      >
+        <input
+          type="button"
+          value="Prefill User Info"
+        />
+        <input
+          type="button"
+          value="Submit"
+        />
+      </div>
+    </form>
+    <div
+      id="notification-wrapper"
+    />
+  </div>
+</div>
+`;

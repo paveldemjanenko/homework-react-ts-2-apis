@@ -7,10 +7,10 @@ import 'react-datepicker/dist/react-datepicker.css';
 import './UserForm.css';
 
 const UserForm: React.FC = () => {
-    const [userName, setUserName] = useState('');
-    const [userLastName, setUserLastName] = useState('');
-    const [userEmail, setUserEmail] = useState('');
-    const [selectedCar, setSelectedCar] = useState<String>('');
+    const [userName, setUserName] = useState<string>('');
+    const [userLastName, setUserLastName] = useState<string>('');
+    const [userEmail, setUserEmail] = useState<string>('');
+    const [selectedCar, setSelectedCar] = useState<string>('');
     const [purchaseDate, setPurchaseDate] = useState<Date | null>(null);
 
     const prefillUserInfo = () => {
@@ -53,7 +53,7 @@ const UserForm: React.FC = () => {
         };
         postRequest(url, body, config)
             .then(() => notify.show('Form successfully submitted', 'success', 2000))
-            .catch((error) => notify.show(error, 'error', 2000));
+            .catch((error: string) => notify.show(error, 'error', 2000));
     };
 
     return (
@@ -83,7 +83,7 @@ const UserForm: React.FC = () => {
             />
 
             <label>Car</label>
-            <select onChange={selectChange}>
+            <select data-testid="select" value={selectedCar} onChange={selectChange}>
                 {selectOptions.map((option) => (
                     <option key={option.value} value={option.value}>
                         {option.text}
@@ -100,7 +100,7 @@ const UserForm: React.FC = () => {
             />
 
             <div className='user-form-buttons'>
-                <input type="button" value="Prefill use info" onClick={() => prefillUserInfo()} />
+                <input type="button" value="Prefill User Info" onClick={() => prefillUserInfo()} />
 
                 <input type="button" value="Submit" onClick={() => submitForm()} />
             </div>
